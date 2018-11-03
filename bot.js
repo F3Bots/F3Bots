@@ -720,9 +720,8 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    const prefix = "+";
       if (message.author.kick) return;
-      if (!message.content.startsWith(prefix)) return;
+       if(message.content.startsWith("+kick")) {return;
      
       let command = message.content.split(" ")[0];
       command = command.slice(prefix.length);
