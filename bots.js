@@ -59,96 +59,6 @@ j = 1;
 
 
 
-client.on('message', msg => {
-  if (msg.content === 'السعودية') {      
-    msg.react("🇸🇦")
-    msg.channel.send("🇸🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'مصر') {      
-    msg.react("🇪🇬")
-    msg.channel.send("🇪🇬")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'المغرب') {      
-    msg.react("🇲🇦")
-    msg.channel.send("🇲🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'العراق') {      
-    msg.react("🇮🇶")
-    msg.channel.send("🇮🇶")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الجزائر') {      
-    msg.react("🇩🇿")
-    msg.channel.send("🇩🇿")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الامارات') {      
-    msg.react("🇦🇪")
-    msg.channel.send("🇦🇪")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'تونس') {      
-    msg.react("🇹🇳")
-    msg.channel.send("🇹🇳")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'سوريا') {      
-    msg.react("🇸🇾")
-    msg.channel.send("🇸🇾")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'ليبيا') {      
-    msg.react("🇱🇾")
-    msg.channel.send("🇱🇾")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'قطر') {      
-    msg.react("🇶🇦")
-    msg.channel.send("🇶🇦")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الصومال') {      
-    msg.react("🇸🇴")
-    msg.channel.send("🇸🇴")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'عمان') {      
-    msg.react("🇴🇲")
-    msg.channel.send("🇴🇲")
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'موريتانيا') {      
-    msg.react("🇲🇷")
-    msg.channel.send("🇲🇷")
-  }
-});
 
 
 
@@ -280,23 +190,24 @@ if (message.content === '+help') {
 
       .setThumbnail(message.author.avatarURL)    
       .addField("**۩ஜ▬▬▬▬▬▬✦ أوامر البوت ✦▬▬▬▬▬▬ஜ۩**","** **")
-     .addField("**❖ $botinfo**","**لمعرفة معلومات البوت**")
-      .addField("**❖ $profile**","**معلومات شخصيه**")
-      .addField("**❖ $topinivtes**","**توب انفايت  **")
-      .addField("**❖ $ping**","**لمعرفة بنق البوت  **")
-      .addField("**❖ $avatar<Mention>**","**لرؤية صورة اي شخص**")
+     .addField("**❖ +botinfo**","**لمعرفة معلومات البوت**")
+      .addField("**❖ +profile**","**معلومات شخصيه**")
+      .addField("**❖ +topinivtes**","**توب انفايت  **")
+      .addField("**❖ +ping**","**لمعرفة بنق البوت  **")
+      .addField("**❖ +avatar<Mention>**","**لرؤية صورة اي شخص**")
 .addField("**۩ஜ▬▬▬▬▬▬✦ (أامر البوت (للإدارة ✦▬▬▬▬▬▬ஜ۩**","** **")
-      .addField("**❖ $mutechannel**","**لتقفيل الشات**")
-      .addField("**❖ $unmutechannel**","**لفتح الشات بعد تقفيله**")
-      .addField("**❖ $bc <Message> **","**لأرسال البرودكاست**")
-      .addField("**❖ $send <Mention> **","**لإرسال رسالة لشخص معين**")
-      .addField("**❖ $mute <Mention> <reason>**","**لإعطاء الشخص ميوت**")
-      .addField("**❖ $unmute <Mention>**","**لفك الميوت **")
-      .addField("**❖ $clear [عددالرسائل]<Mention>**","**لمسح عدد معين من الرسائل **")
-      .addField("**❖ $giveaway**","**لعمل قيف اواي **")
+      .addField("**❖ +mutechannel**","**لتقفيل الشات**")
+      .addField("**❖ +unmutechannel**","**لفتح الشات بعد تقفيله**")
+      .addField("**❖ +bc <Message> **","**لأرسال البرودكاست**")
+      .addField("**❖ +send <Mention> **","**لإرسال رسالة لشخص معين**")
+      .addField("**❖ +mute <Mention> <reason>**","**لإعطاء الشخص ميوت**")
+      .addField("**❖ +unmute <Mention>**","**لفك الميوت **")
+      .addField("**❖ +clear [عددالرسائل]<Mention>**","**لمسح عدد معين من الرسائل **")
+      .addField("**❖ +giveaway**","**لعمل قيف اواي **")
       .addField("**۩ஜ▬▬▬▬▬▬✦أوامر الالعاب✦▬▬▬▬▬▬ஜ۩**","** **")
       .addField("**❖ $sara7a**","**لعبة صراحه**")
       .addField("**❖ $rps**","**لعبة حجرة ورقة مقص**")
+      .addField("**❖ $اسم اي دولة عربية <Mention> **","**اكتب اسم اي دولة و يعطيك علمها**")
       .addField("**❖ $[Soon]**","**لعبة كت  تويت**")
       .addField("**۩ஜ▬▬▬▬▬▬✦Info✦▬▬▬▬▬▬ஜ۩**","** **")
       .addField("**❖ --->**","**Made By : NIGGA•|•CLAN**")
