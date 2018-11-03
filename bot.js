@@ -650,18 +650,91 @@ hours = 12;
 
 
 
-
-
-
-
-
- 
-
-
-
-
-
-
+client.on('message', message => {
+    if (message.content.startsWith(prefix + 'help')) { //xR1 - [! - Mdax ]
+        let pages = [`
+    ***__وصف عن البوت__***
+    **
+    :gem:  البوت فيه كثير ميزات حلوة و جميلة
+    **
+            ***__General orders__***
+    **
+    『+profile / يعرض لك معلومات عنك』
+    『+avatar / لرؤية صورة شخص 』
+    『+botinfo / لرؤية معلومات عن البوت 』
+    『+getid / ل رؤية ايدي اي شخص』
+    『+ping / لرؤية بنق البوت 』
+    **
+      `
+    ,`
+            ***__Admin orders__***
+    **
+    『+clear / لحذف الشات 』
+    『+mutechannel / لقفل الشات  』
+    『+unmutechannel / لفتح الشات 』
+    『+bc / لارسال رسالة لجميع اعضاء السيرفر 』
+    『+kick / لطرد شخص من السيرفر 』
+    『+mute / لاعطاء شخص ميوت 』
+    『+unmute / لفك ميوت شخص 』
+    『+giveaway / لعمل قيف اواي 』
+    
+    
+    
+    
+    **
+      `
+    ,`
+    
+       
+    `]
+        let page = 1;
+     
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setFooter(`Page ${page} of ${pages.length}`)
+        .setDescription(pages[page-1])
+     
+        message.author.sendEmbed(embed).then(msg => {
+     
+            msg.react('◀').then( r => {
+                msg.react('▶')
+     
+     
+            const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+            const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+     
+     
+            const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+            const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+     
+     
+     
+            backwards.on('collect', r => {
+                if (page === 1) return;
+                page--;
+                embed.setDescription(pages[page-1]);
+                embed.setFooter(`Page ${page} of ${pages.length}`);
+                msg.edit(embed)
+            })
+            forwards.on('collect', r => {
+                if (page === pages.length) return;
+         
+          page++;
+                embed.setDescription(pages[page-1]);
+                embed.setFooter(`Page ${page} of ${pages.length}`);
+                msg.edit(embed)
+            })
+            })
+        })
+        }
+    });
+    client.on('message', message => {
+        if(message.content === '+help') {
+            message.reply('تم ارساله بالخاص :white_check_mark: ');
+        }
+    });
+    
+    
 
 
 client.login(process.env.BOT_TOKEN);
