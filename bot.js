@@ -81,7 +81,7 @@ client.on('message', message => {
 if (message.content.startsWith('رابط')){
      let ra3d = new Discord.RichEmbed()
   .setColor("#e9ab26")
-  .setDescription("**https://discord.gg/PA9amd6**")
+  .setDescription("**https://discord.gg/a2eaudH**")
      
      
   message.channel.sendEmbed(ra3d);
@@ -209,8 +209,8 @@ if (message.content === '+help') {
 
       .addField("**❖ $[Soon]**","**لعبة كت  تويت**")
       .addField("**۩ஜ▬▬▬▬▬▬✦Info✦▬▬▬▬▬▬ஜ۩**","** **")
-      .addField("**❖ --->**","**Made By : ! - Mdax .#0518**")
-      .addField("**❖ --->**","**Bot Server :https://discord.gg/Y9x7zqe**")
+      .addField("**❖ --->**","**Made By : NIGGA•|Clan**")
+      .addField("**❖ --->**","**Bot Server :https://discord.gg/a2eaudH**")
 
     .setColor('#e9ab26')
   message.author.sendEmbed(embed);
