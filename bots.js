@@ -39,7 +39,7 @@ client.user.setGame(`صيآنة`,"http://twitch.tv/S-F")
 
 client.on('ready', function(){    
     var ms = 40000 ;    
-    var setGame = [`NIGGA•|•SECURRRITY`,"+help"];    
+    var setGame = [`NIGGA•|•SECURRRITY`,"$help"];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
@@ -54,7 +54,6 @@ j = 1;
 }, ms);    
     
 });
-
 
 
 
@@ -82,17 +81,12 @@ client.on('message', message => {
 if (message.content.startsWith('رابط')){
      let ra3d = new Discord.RichEmbed()
   .setColor("#e9ab26")
-  .setDescription("**https://discord.gg/xVAwuTN**")
+  .setDescription("**https://discord.gg/PA9amd6**")
      
      
   message.channel.sendEmbed(ra3d);
     }
 });
-
-
-
-
-
 
 
 
@@ -168,6 +162,10 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__�
 
 
 
+
+
+
+
              
      
 
@@ -200,19 +198,19 @@ if (message.content === '+help') {
       .addField("**❖ +mutechannel**","**لتقفيل الشات**")
       .addField("**❖ +unmutechannel**","**لفتح الشات بعد تقفيله**")
       .addField("**❖ +bc <Message> **","**لأرسال البرودكاست**")
-      .addField("**❖ +send <Mention> **","**لإرسال رسالة لشخص معين**")
       .addField("**❖ +mute <Mention> <reason>**","**لإعطاء الشخص ميوت**")
       .addField("**❖ +unmute <Mention>**","**لفك الميوت **")
       .addField("**❖ +clear [عددالرسائل]<Mention>**","**لمسح عدد معين من الرسائل **")
       .addField("**❖ +giveaway**","**لعمل قيف اواي **")
       .addField("**۩ஜ▬▬▬▬▬▬✦أوامر الالعاب✦▬▬▬▬▬▬ஜ۩**","** **")
-      .addField("**❖ $sara7a**","**لعبة صراحه**")
-      .addField("**❖ $rps**","**لعبة حجرة ورقة مقص**")
-      .addField("**❖ $اسم اي دولة عربية <Mention> **","**اكتب اسم اي دولة و يعطيك علمها**")
+      .addField("**❖ +sara7a**","**لعبة صراحه**")
+      .addField("**❖ +rps**","**لعبة حجرة ورقة مقص**")
+      .addField("**❖ +لعبة الأعلام**","**اكتب اسم اي دولة عربية و يعطيك علمها**")
+
       .addField("**❖ $[Soon]**","**لعبة كت  تويت**")
       .addField("**۩ஜ▬▬▬▬▬▬✦Info✦▬▬▬▬▬▬ஜ۩**","** **")
-      .addField("**❖ --->**","**Made By : NIGGA•|•CLAN**")
-      .addField("**❖ --->**","**Bot Server :https://discord.gg/PA9amd6**")
+      .addField("**❖ --->**","**Made By : ! - Mdax .#0518**")
+      .addField("**❖ --->**","**Bot Server :https://discord.gg/Y9x7zqe**")
 
     .setColor('#e9ab26')
   message.author.sendEmbed(embed);
@@ -226,7 +224,6 @@ if (message.content === '+help') {
  
  
  
-
 
 
 
@@ -285,14 +282,14 @@ client.on('message', message => {
 
    client.on('guildMemberAdd', member => {
    if(member.presence.status === 'offline') {
-       member.guild.owner.send(`:hearts:  فيه عضو جديد دخل السيرفر `)
+       member.guild.owner.send(`:eyes: في واحد دخل السيرفر ومسوي نفسه غامض اوفلاين `)
 }
 });
 client.on('guildMemberRemove', member => {
    if(member.presence.status === 'offline') {
-       member.guild.owner.send(` فيه عضو خرج من السيرفر :disappointed_relieved:`)
+       member.guild.owner.send(`في واحد خرج من سيرفرك وهو مسوي نفسه غامض اوف لاين :eyes: `)
 }
-
+});
 
 
 
@@ -379,7 +376,7 @@ embed: new Discord.RichEmbed()
    .setAuthor(client.user.username,client.user.avatarURL)
    .setThumbnail(client.user.avatarURL)
    .setColor('RANDOM')
-   .setTitle('``NIGGA•|•SECURRITY`` ')
+   .setTitle('``NIGGA•|•SECURRRITY`` ')
    .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
    .addField('``servers``', [client.guilds.size], true)
    .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -389,7 +386,7 @@ embed: new Discord.RichEmbed()
          .addField('``My Prefix``' , `[ $ ]` , true)
          .addField('``My Language``' , `[ JavaScript ]` , true)
          .addField('``Bot Version``' , `[ v0.1 ]` , true)
-         .setFooter('By | <@! - Mdax .#0518 >')
+         .setFooter('By | <@NIGGA•|•SECURRRITY>')
 })
 }
 });
@@ -486,7 +483,7 @@ client.on('message',message =>{
   var embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://cdn.discordapp.com/avatars/500704774677856266/53f1ec7e75d3e1164431da77880aa195.png?size=2048")
+  .setThumbnail("https://cdn.discordapp.com/attachments/508245698773385216/508246980716265493/1541196250182.png")
            message.channel.send({ embed: embed });
    
   });
