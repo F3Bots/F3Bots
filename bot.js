@@ -232,16 +232,7 @@ if (message.content === '+help') {
 
 
 
-client.on('message', message => {
-if (message.content.startsWith("+ban")) {
-    var mention = message.mentions.members.first();
-    if (!args[0]) return msg.reply(`**منشن الشخص اولا**`)
 
-    mention.ban("By: " + message.mentions.users.first);
-    
-    message.channel.send("تم أعطاء باند الى : " + mention.tag);
-};
-});
 
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
